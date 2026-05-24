@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkatelia — Microesferas Nutracéuticas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #faf8f6;
+            color: #2e2528;
+        }
+        .bg-gradient-arkatelia {
+            background: linear-gradient(135deg, #2e1047 0%, #4c0519 50%, #1e3a8a 100%);
+        }
+        .text-gradient-berry {
+            background: linear-gradient(135deg, #6b21a8, #9d174d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-purple-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="w-4 h-4 rounded-full bg-purple-700 animate-pulse"></span>
+                <span class="font-black text-xl tracking-wider text-purple-950">ARKATELIA</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#inicio" class="hover:text-purple-800 transition">Inicio</a>
+                <a href="#problema" class="hover:text-purple-800 transition">Problema</a>
+                <a href="#proyecto" class="hover:text-purple-800 transition">Innovación</a>
+                <a href="#metodologia" class="hover:text-purple-800 transition">Metodología</a>
+                <a href="#analisis" class="hover:text-purple-800 transition">Ciencia Analítica</a>
+                <a href="#equipo" class="hover:text-purple-800 transition">Equipo</a>
+            </div>
+            <span class="text-xs font-bold px-3 py-1 bg-purple-900 text-white rounded-full">STEM+ 2026</span>
+        </div>
+    </nav>
+
+    <header id="inicio" class="bg-gradient-arkatelia text-white py-24 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="bg-white/10 text-purple-200 border border-white/20 text-xs uppercase tracking-widest px-4 py-1.5 rounded-full font-semibold">
+                Anteproyecto de Investigación Escolar Científica
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black mt-6 tracking-tight leading-tight">
+                Desarrollo y análisis de microesferas nutracéuticas para el control glicémico
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-purple-100 max-w-2xl mx-auto font-light leading-relaxed">
+                Esferificación avanzada a base de extractos estables de uva y arándano enriquecidos con la superpotencia antioxidante del maqui micronizado.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#proyecto" class="bg-white text-purple-950 px-6 py-3 rounded-xl font-bold shadow-lg hover:bg-purple-50 transition transform hover:-translate-y-0.5">
+                    Explorar la Innovación
+                </a>
+                <a href="#metodologia" class="bg-purple-950/40 border border-white/20 text-white px-6 py-3 rounded-xl font-medium hover:bg-purple-950/60 transition">
+                    Ver Proceso Técnico
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="problema" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5">
+                <span class="text-xs font-bold uppercase tracking-wider text-pink-700 block mb-2">Contexto de Salud Pública</span>
+                <h2 class="text-3xl font-black text-gray-900 tracking-tight">El Impacto Crítico de la Diabetes Tipo 2</h2>
+                <p class="mt-4 text-gray-600 leading-relaxed">
+                    A nivel mundial y nacional, la diabetes se vincula estrechamente a factores como la obesidad, que altera el metabolismo provocando que la glucosa se acumule en niveles excesivos en la sangre de manera crónica.
+                </p>
+                <div class="mt-6 space-y-4">
+                    <div class="flex items-start p-4 bg-red-50 rounded-xl border border-red-100">
+                        <span class="text-2xl mr-3">📊</span>
+                        <div>
+                            <h4 class="font-bold text-red-950">11,1% de la Población Adulta</h4>
+                            <p class="text-sm text-red-800">Aproximadamente 589 millones de personas viven hoy bajo este desorden metabólico a nivel global.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 bg-amber-50 rounded-xl border border-amber-100">
+                        <span class="text-2xl mr-3">🔮</span>
+                        <div>
+                            <h4 class="font-bold text-amber-950">Proyección Crítica para 2050</h4>
+                            <p class="text-sm text-amber-800">Se estima que la cifra trepará a los 853 millones si no se desarrollan nuevas estrategias bioactivas efectivas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-7 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <h3 class="text-center font-bold text-gray-700 text-sm mb-4">Crecimiento Global de la Diabetes (Millones de personas)</h3>
+                <div class="chart-container">
+                    <canvas id="chartDiabetes"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyecto" class="py-20 bg-purple-950 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight">La Solución: Sinergia Frutal de Tres Matrices</h2>
+                <p class="mt-4 text-purple-200 font-light">
+                    Aprovechamos polifenoles vegetales y antocianinas como la <strong>delfinidina</strong>, molécula capaz de reducir la glucemia regulando el transporte de azúcar en el intestino y protegiendo al páncreas del daño oxidativo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl relative group hover:bg-white/10 transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-900/60 flex items-center justify-center text-2xl font-bold mb-6">🍇</div>
+                    <h3 class="text-xl font-bold mb-2">Maqui <span class="text-xs font-normal text-purple-300 block italic">(Aristotelia chilensis)</span></h3>
+                    <p class="text-sm text-purple-200 font-light leading-relaxed">
+                        Posee de forma natural la mayor densidad de delfinidinas del reino frutal. Su poder antioxidante (ORAC de 28,200 unidades) es 7 veces superior al del acai y 9 veces al de las bayas de goji. Aporta la fracción sólida micronizada.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl relative group hover:bg-white/10 transition">
+                    <div class="w-12 h-12 rounded-xl bg-red-900/60 flex items-center justify-center text-2xl font-bold mb-6">🍷</div>
+                    <h3 class="text-xl font-bold mb-2">Uva Negra <span class="text-xs font-normal text-purple-300 block italic">(Vitis vinifera)</span></h3>
+                    <p class="text-sm text-purple-200 font-light leading-relaxed">
+                        Su hollejo y orujo concentran estilbenos y flavonoides de alta capacidad cardioprotectora y reguladora. El proyecto valoriza sus subproductos agroindustriales sólidos promoviendo una economía circular sustentable.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl relative group hover:bg-white/10 transition">
+                    <div class="w-12 h-12 rounded-xl bg-blue-900/60 flex items-center justify-center text-2xl font-bold mb-6">🫐</div>
+                    <h3 class="text-xl font-bold mb-2">Arándano <span class="text-xs font-normal text-purple-300 block italic">(Vaccinium corymbosum)</span></h3>
+                    <p class="text-sm text-purple-200 font-light leading-relaxed">
+                        Frena el daño celular sistémico y a nivel metabólico ejerce un poderoso efecto hipoglucemiante, estimulando las células beta del páncreas para optimizar la secreción y asimilación natural de la insulina.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-purple-700 block mb-2">Ingeniería del Proceso</span>
+                <h2 class="text-3xl font-black text-gray-900 tracking-tight">Ruta Metodológica de Estabilización</h2>
+                <p class="mt-3 text-gray-600 font-light">Para solucionar el problema de la extrema inestabilidad química de las antocianinas ante la luz, el pH y el calor, estructuramos un flujo tecnológico avanzado:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-purple-50/60 p-6 rounded-xl border border-purple-100">
+                    <span class="text-xs font-bold text-purple-700 tracking-widest uppercase block mb-1">Fase 1</span>
+                    <h4 class="font-bold text-gray-900 mb-2">Extracción por Ultrasonido</h4>
+                    <p class="text-xs text-gray-600">Extracción limpia y asistida por cavitación acústica para recuperar los compuestos bioactivos líquidos del jugo de uva y arándano sin alterarlos térmicamente.</p>
+                </div>
+                <div class="bg-purple-50/60 p-6 rounded-xl border border-purple-100">
+                    <span class="text-xs font-bold text-purple-700 tracking-widest uppercase block mb-1">Fase 2</span>
+                    <h4 class="font-bold text-gray-900 mb-2">Esterificación Química</h4>
+                    <p class="text-xs text-gray-600">Unión de los polifenoles hidrofílicos a cadenas grasas de ácidos/alcoholes para transformarlos en "fenolípidos" anfifílicos, dándoles estabilidad y protección estructural de escudo molecular.</p>
+                </div>
+                <div class="bg-purple-50/60 p-6 rounded-xl border border-purple-100">
+                    <span class="text-xs font-bold text-purple-700 tracking-widest uppercase block mb-1">Fase 3</span>
+                    <h4 class="font-bold text-gray-900 mb-2">Micronizado Mecánico</h4>
+                    <p class="text-xs text-gray-600">Molienda ultra-fina aplicada a la biomasa sólida del maqui y orujo. Rompe las paredes celulares rígidas para dejar libres los nutrientes expuestos y aumentar su bioabsorción intestinal.</p>
+                </div>
+                <div class="bg-purple-50/60 p-6 rounded-xl border border-purple-100">
+                    <span class="text-xs font-bold text-purple-700 tracking-widest uppercase block mb-1">Fase 4</span>
+                    <h4 class="font-bold text-gray-900 mb-2">Esferificación de Hidrogel</h4>
+                    <p class="text-xs text-gray-600">Encapsulación final dosificando gota a gota la mezcla de los extractos enriquecidos combinados con alginato de sodio en un baño iónico fijador de cloruro de calcio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analisis" class="py-20 bg-gray-50 border-t border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-black text-gray-900 tracking-tight">Control y Cuantificación Analítica</h2>
+                <p class="mt-4 text-gray-600 font-light">
+                    Evaluamos el rendimiento y la calidad antioxidante del sistema mediante rigurosos protocolos espectrofotométricos de laboratorio.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="px-2.5 py-1 text-xs font-bold bg-indigo-100 text-indigo-800 rounded">Espectrofotometría</span>
+                        <h3 class="text-xl font-bold text-gray-900">Método de pH Diferencial</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                        Aprovecha el cambio estructural reversible de las antocianinas monoméricas. Se diluye el extracto en dos buffers paralelos: uno de <strong>pH 1.0</strong> (forma catión flavilio coloreado) y otro de <strong>pH 4.5</strong> (forma hemicetálica incolora). Las lecturas a 520 y 700 nm descuentan interferencias y determinan la concentración pura de antocianinas.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="chartPhDiferencial"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="px-2.5 py-1 text-xs font-bold bg-pink-100 text-pink-800 rounded">Colorimetría</span>
+                        <h3 class="text-xl font-bold text-gray-900">Reactivo Folin-Ciocalteu</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                        Reacción clásica de óxido-reducción en medio alcalino. Los grupos hidroxilo fenólicos de la muestra ceden electrones a los ácidos fosfomolibdato y fosfotungstato del reactivo, virando su color original amarillo a un azul brillante intenso medido de forma exacta a una longitud de onda de 765 nm contra una curva patrón de ácido gálico.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="chartPolifenoles"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-arkatelia text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-black tracking-tight mb-4">Diseño Experimental Formulado</h3>
+            <div class="bg-white/10 backdrop-blur border border-white/20 p-6 rounded-2xl max-w-3xl mx-auto my-6 text-left">
+                <span class="font-bold text-pink-300 uppercase text-xs tracking-wider">Hipótesis de Investigación:</span>
+                <p class="mt-2 text-md font-light italic leading-relaxed">
+                    "La combinación balanceada de extractos esterificados de uva y arándano, enriquecidos con la adición de maqui micronizado, incrementará exponencialmente la capacidad antioxidante total y facilitará la formación controlada de microesferas nutracéuticas con perfil glicémico optimizado."
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-left mt-8">
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                    <span class="font-bold text-purple-300 block mb-1">Variable Independiente:</span>
+                    Proporciones volumétricas de la mezcla de extractos frutales líquidos y porcentajes de dosificación de maqui sólido micronizado.
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                    <span class="font-bold text-purple-300 block mb-1">Variable Dependiente:</span>
+                    Contenido residual final de polifenoles activos, concentración de delfinidina retenida y porcentaje de capacidad antioxidante (ORAC).
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10">
+                    <span class="font-bold text-purple-300 block mb-1">Variables Controladas:</span>
+                    Temperatura y tiempos de agitación, concentración estandarizada de alginato de sodio y tiempo de fijación en el baño de cloruro de calcio.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipo" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-800 block mb-2">Comunidad Científica Escolar</span>
+            <h2 class="text-3xl font-black text-gray-900 tracking-tight mb-12">Equipo de Investigación</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+                <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
+                    <div class="w-16 h-16 bg-purple-900 rounded-full mx-auto flex items-center justify-center text-white text-xl font-bold shadow mb-4">VC</div>
+                    <h4 class="text-lg font-bold text-gray-900">Valentina Contreras</h4>
+                    <p class="text-xs text-purple-700 font-semibold uppercase mt-1">Investigadora Integrante</p>
+                    <p class="text-xs text-gray-500 mt-2">Curso 2°C — STEM+ 2026</p>
+                </div>
+                <div class="p-6 bg-purple-50/50 rounded-2xl border border-purple-100">
+                    <div class="w-16 h-16 bg-purple-900 rounded-full mx-auto flex items-center justify-center text-white text-xl font-bold shadow mb-4">PR</div>
+                    <h4 class="text-lg font-bold text-gray-900">Pía Rojas</h4>
+                    <p class="text-xs text-purple-700 font-semibold uppercase mt-1">Investigadora Integrante</p>
+                    <p class="text-xs text-gray-500 mt-2">Curso 2°A — STEM+ 2026</p>
+                </div>
+            </div>
+
+            <div class="border-t border-purple-100 pt-8 max-w-2xl mx-auto">
+                <h5 class="text-sm font-bold text-gray-700 uppercase tracking-widest mb-4">Tutores de la Investigación</h5>
+                <p class="text-sm text-gray-600 font-medium">
+                    Prof. Jorge Galdamez &nbsp;|&nbsp; Prof. Alejandra Ferrada
+                </p>
+                <p class="text-xs text-gray-400 mt-3">
+                    Liceo Bicentenario de Excelencia Polivalente San Nicolás
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 text-xs text-center">
+        <p class="font-bold text-gray-300 tracking-wider uppercase mb-2">Proyecto Arkatelia 2026</p>
+        <p class="max-w-md mx-auto px-4">Desarrollado bajo el marco del programa de investigación escolar en ciencias, tecnología, ingeniería y matemáticas (STEM+).</p>
+        <p class="mt-8 text-gray-600">Fecha oficial de entrega y presentación del anteproyecto: 29/05/2026</p>
+    </footer>
+
+    <script>
+        // 1. CHART: PROYECCIÓN DIABETES
+        const ctxDiabetes = document.getElementById('chartDiabetes').getContext('2d');
+        new Chart(ctxDiabetes, {
+            type: 'line',
+            data: {
+                labels: ['2025 (Actual)', '2050 (Proyección)'],
+                datasets: [{
+                    label: 'Población afectada (Millones)',
+                    data: [589, 853],
+                    borderColor: '#9d174d',
+                    backgroundColor: 'rgba(157, 23, 77, 0.1)',
+                    borderWidth: 3,
+                    pointBackgroundColor: '#4c0519',
+                    pointRadius: 6,
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: false, grid: { color: '#f3f4f6' } } }
+            }
+        });
+
+        // 2. CHART: COMPORTAMIENTO PH DIFERENCIAL
+        const ctxPh = document.getElementById('chartPhDiferencial').getContext('2d');
+        new Chart(ctxPh, {
+            type: 'bar',
+            data: {
+                labels: ['Buffer pH 1.0 (Catión Flavilio)', 'Buffer pH 4.5 (Hemicetálica)'],
+                datasets: [{
+                    label: 'Intensidad / Absorbancia Absoluta',
+                    data: [0.85, 0.04],
+                    backgroundColor: ['#4c1d95', '#e2e8f0'],
+                    borderRadius: 8,
+                    borderWidth: 1,
+                    borderColor: '#2e1047'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { y: { max: 1.0, beginAtZero: true } }
+            }
+        });
+
+        // 3. CHART: RENDIMIENTO POLIFENOLES (COMPARATIVA ANTIOXIDANTE ESTIMADA)
+        const ctxPolifenoles = document.getElementById('chartPolifenoles').getContext('2d');
+        new Chart(ctxPolifenoles, {
+            type: 'doughnut',
+            data: {
+                labels: ['Maqui Micronizado', 'Uva (Orujo/Hollejo)', 'Arándano Estabilizado'],
+                datasets: [{
+                    data: [55, 25, 20],
+                    backgroundColor: ['#2e1047', '#4c0519', '#1e3a8a'],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { boxWidth: 12, font: { size: 11 } }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+    </script>
+</body>
+</html>
